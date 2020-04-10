@@ -46,7 +46,9 @@ public class SmartPosts {
                     String address = element.getElementsByTagName("address").item(0).getTextContent();
                     String country = element.getElementsByTagName("country").item(0).getTextContent();
                     String availability = element.getElementsByTagName("availability").item(0).getTextContent();
-                    SmartPostInfo posti = new SmartPostInfo(id, name, address, country, availability);
+                    String city = element.getElementsByTagName("city").item(0).getTextContent();
+                    String postalcode = element.getElementsByTagName("postalcode").item(0).getTextContent();
+                    SmartPostInfo posti = new SmartPostInfo(id, name, address, country, availability, city, postalcode);
                     postList.add(posti);
 
                     setSmartList(postList);

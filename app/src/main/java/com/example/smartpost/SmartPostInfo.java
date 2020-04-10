@@ -6,17 +6,21 @@ public class SmartPostInfo {
     private String address;
     private String country;
     private String availability;
+    private String city;
+    private String postalcode;
     @Override
             public String toString(){
-        return place_id+name+address+country+availability;
+        return name+" : "+availability;
     }
 
-    SmartPostInfo(Integer place_id, String name, String address, String country, String availability){
+    SmartPostInfo(Integer place_id, String name, String address, String country, String availability, String city, String postalcode){
         this.place_id = place_id;
         this.name = name;
         this.address = address;
         this.country = country;
         this.availability = availability;
+        this.city = city;
+        this.postalcode = postalcode;
     }
 
     Integer getPlace_id(){ return place_id;}
@@ -24,6 +28,8 @@ public class SmartPostInfo {
     String getAddress(){ return address;}
     String getCountry(){ return country;}
     String getAvailability(){ return availability;}
+    String getCity(){ return city;}
+    String getPostalcode(){return postalcode;}
 
 
 }

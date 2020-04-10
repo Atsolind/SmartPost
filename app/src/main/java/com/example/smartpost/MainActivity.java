@@ -39,12 +39,19 @@ public class MainActivity extends AppCompatActivity {
                 choice = post.get(position);
                 String item = parent.getItemAtPosition(position).toString();
                 Toast.makeText(parent.getContext(), "Selected: "+ item, Toast.LENGTH_SHORT).show();
+                setTextData(choice.toString()+"\n"+"Country: "+choice.getCountry()+"\n"+"City: "+ choice.getCity()+
+                        "\n"+"Address: "+choice.getAddress()+"\n"+"Postal code: "+ choice.getPostalcode()+"\n"+"Open: "+choice.getAvailability());
+
             }
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
     }
+    public void setTextData(String s){
+        textView.setText(s);
+    }
+
 }
 
 
